@@ -74,6 +74,35 @@ header {
   padding-top: 5%;
 }
 
+main {
+  width: 100%;
+  height: 80%;
+}
+
+.control-container {
+  width: 100%;
+  height: 60%;
+  padding: 5% 15% 5% 15%;
+}
+
+.control-left {
+  width: 50%;
+  height: 100%;
+  /*display: inline;*/
+  float: left;
+  text-align: center;
+
+}
+
+.control-right {
+  width: 50%;
+  height: 100%;
+  float: right;
+  text-align: center;
+  /*display: inline;*/
+
+}
+
 .direction-button  {
   font-family: 'Press Start 2P', cursive;
   background: #3D4C53;
@@ -101,6 +130,8 @@ header {
   color: white;
 }
 
+.control-button:focus { outline: none; }
+
 .control-button.a {
   background: #ED1B24;
 }
@@ -116,6 +147,9 @@ header {
 .control-button.y {
   background: #23B14D;
 }
+
+
+
 /*
 #holder{
   -moz-user-select: -moz-none;
