@@ -5,35 +5,36 @@ var config = {
   databaseURL: "https://fir-keypress.firebaseio.com",
   storageBucket: "fir-keypress.appspot.com",
   messagingSenderId: "470329092816"
-};
+}
 
 firebase.initializeApp(config)
 
-const db = firebase.database();
+const db = firebase.database()
 const keyPressRef = db.ref('keys')
 
-window.onkeyup = function(e) {
-  console.log(e.keyCode )
-  const key = e.keyCode
 
-  let newKeyRef = keyPressRef.push().key;
-  console.log(newKeyRef);
+$( ".direction-button" ).click(function() {
+  console.log($( this ).text());
+  sendKey($( this ).text())
 
-db.ref('keys/' + newKeyRef).set({
-  key: key,
-  id: newKeyRef
-})
-.then((value) => {console.log('added key')})
-.catch((err) => {console.log('err', err)})
+});
 
-// const newKeyRef = keyPressRef.push();
-// keyPressRef.set(key).then((value) => {console.log('here');})
-// .catch((err) => {console.log('err', err);});
+$( ".control-button" ).click(function() {
+  console.log($( this ).text());
+  sendKey($( this ).text())
+});
 
-   //
-  //  if (key == 38) {
-  //      playerSpriteX += 10;
-  //  }else if (key == 40) {
-  //      playerSpriteX -= 10;
-  //  }
+function sendKey(keyPressed) {
+
+  const key = keyPressed
+
+  let newKeyRef = keyPressRef.push().key
+  console.log(newKeyRef)
+
+  db.ref('keys/' + newKeyRef).set({
+    key: key,
+    id: newKeyRef
+  })
+  .then(() => {console.log('added key')})
+  .catch((err) => {console.log('err', err)})
 }

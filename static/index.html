@@ -4,19 +4,38 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+  <title>KeyPress Controller</title>
+  <meta name="description" content="KeyPress Controller">
+  <meta name="author" content="ashleymarkfletcher">
 
-  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
-
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
 <body>
+  <div class="success-fail">
+
+  </div>
+  <header>
+    <h1>
+      Press a Key
+    </h1>
+  </header>
+  <main>
+    <div class="control-container">
+      <button class="direction-button" type="button" name="up">UP</button>
+      <button class="direction-button" type="button" name="down">DOWN</button>
+      <button class="direction-button" type="button" name="left">LEFT</button>
+      <button class="direction-button" type="button" name="right">RIGHT</button>
+      <button class="control-button a" type="button" name="a">A</button>
+      <button class="control-button b" type="button" name="b">B</button>
+      <button class="control-button x" type="button" name="x">X</button>
+      <button class="control-button y" type="button" name="y">Y</button>
+    </div>
+  </main>
+
   <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
