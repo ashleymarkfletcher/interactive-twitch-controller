@@ -1,7 +1,7 @@
 // Type "Hello World" then press enter.
-var robot = require("robotjs");
-var firebase = require("firebase");
-var config = {
+const robot = require("robotjs");
+const firebase = require("firebase");
+const config = {
   apiKey: "AIzaSyBxTjTlNW-AAeiwZ_8xRuIzQjSvVZq2E84",
   authDomain: "fir-keypress.firebaseapp.com",
   databaseURL: "https://fir-keypress.firebaseio.com",
