@@ -1,6 +1,10 @@
 {
   "rules": {
-    ".read": true,
-    ".write": true
+    "keys": {
+      "$key_id": {
+        ".read": true,
+        ".write": "newData.hasChildren(['id', 'key']) && newData.child('key').isString() && newData.child('id').isString() && newData.child('id').val() === $key_id && newData.child('id').val().length < 50 && newData.child('key').val().length < 50"
+      }
+    }
   }
 }
