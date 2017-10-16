@@ -15,14 +15,14 @@ const db = firebase.database()
 const keyPressRef = db.ref('keys')
 var lastKey = {}
 
+setInterval(() => {
 
-setInterval(function () {
-
-  keyPressRef.limitToLast(1).once('value').then(function(snapshot) {
+  keyPressRef.limitToLast(1).once('value').then((snapshot) => {
     const keyObject = snapshot.val()
 
     const key =  keyObject[Object.keys(keyObject)[0]]
 
+    // don't keep doing same command
     if (lastKey.id === key.id) {
       console.log('same as last!')
     } else {
@@ -61,7 +61,7 @@ function keyCodeToString(key) {
       return 'x'
     case 'Y':
       return 'y'
-    default:{
+    default: {
       return null
     }
 

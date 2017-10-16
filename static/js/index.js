@@ -15,21 +15,23 @@ firebase.initializeApp(config)
 const db = firebase.database()
 const keyPressRef = db.ref('keys')
 
-function streams(streams){
-  console.log(streams);
+function streams(streams) {
+  console.log(streams)
   if (streams.stream === null) {
     console.log('not live!');
     $( ".online-status" ).css('background-color', 'red')
     $( ".status-text" ).text('OFFLINE')
   } else {
     console.log('live!');
-    $( ".online-status" ).css('background-color', 'red')
+    $( ".online-status" ).css('background-color', 'green')
     $( ".status-text" ).text('ONLINE')
   }
 }
 
+// check if stream is online
 getStream()
 
+// keep checking every 30 seconds
 setInterval(getStream, 30000)
 
 function getStream() {
@@ -39,7 +41,6 @@ function getStream() {
     jsonpCallback: "streams"
   })
 }
-
 
 $( ".direction-button" ).click(function() {
   console.log( $(this).text() )
@@ -54,7 +55,6 @@ $( ".control-button" ).click(function() {
 function sendKey(keyPressed) {
 
   const key = keyPressed
-
   let newKeyRef = keyPressRef.push().key
   console.log(newKeyRef)
 
