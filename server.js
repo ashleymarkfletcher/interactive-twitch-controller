@@ -1,4 +1,3 @@
-// Type "Hello World" then press enter.
 const robot = require("robotjs");
 const firebase = require("firebase");
 const config = {
@@ -43,6 +42,7 @@ setInterval(() => {
   })
 }, 1000)
 
+// switch statement to make room for additional keys if needed
 function keyCodeToString(key) {
   switch (key) {
     case 'UP':
@@ -64,7 +64,6 @@ function keyCodeToString(key) {
     default: {
       return null
     }
-
   }
 }
 

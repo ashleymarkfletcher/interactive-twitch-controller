@@ -25,37 +25,37 @@ class App extends Component {
     return (
       <div className="App">
         <StreamActive/>
-      <header>
-        <h1>
-          Press a Key
-        </h1>
-      </header>
-      <main>
-        <div className="control-container">
-          <div className="control-left">
-            <div className="control-left-top">
-              <button className="direction-button" type="button" onClick={this.sendKey} name="up">UP</button>
+        <header>
+          <h1>
+            Press a Key
+          </h1>
+        </header>
+        <main>
+          <div className="control-container">
+            <div className="control-left">
+              <div className="control-left-top">
+                <button className="direction-button" type="button" onClick={this.sendKey} name="up">UP</button>
+              </div>
+              <div className="control-left-middle">
+                <button className="direction-button" type="button" onClick={this.sendKey} name="left">LEFT</button>
+                <button className="direction-button" type="button" onClick={this.sendKey} name="right">RIGHT</button>
+              </div>
+              <div className="control-left-bottom">
+                <button className="direction-button" type="button" onClick={this.sendKey} name="down">DOWN</button>
+              </div>
             </div>
-            <div className="control-left-middle">
-              <button className="direction-button" type="button" onClick={this.sendKey} name="left">LEFT</button>
-              <button className="direction-button" type="button" onClick={this.sendKey} name="right">RIGHT</button>
-            </div>
-            <div className="control-left-bottom">
-              <button className="direction-button" type="button" onClick={this.sendKey} name="down">DOWN</button>
+            <div className="control-right">
+              <div className="control-right-top">
+                <button className="control-button y" type="button" onClick={this.sendKey} name="y">Y</button>
+                <button className="control-button x" type="button" onClick={this.sendKey} name="x">X</button>
+              </div>
+              <div className="control-right-bottom">
+                <button className="control-button b" type="button" onClick={this.sendKey} name="b">B</button>
+                <button className="control-button a" type="button" onClick={this.sendKey} name="a">A</button>
+              </div>
             </div>
           </div>
-          <div className="control-right">
-            <div className="control-right-top">
-              <button className="control-button y" type="button" onClick={this.sendKey} name="y">Y</button>
-              <button className="control-button x" type="button" onClick={this.sendKey} name="x">X</button>
-            </div>
-            <div className="control-right-bottom">
-              <button className="control-button b" type="button" onClick={this.sendKey} name="b">B</button>
-              <button className="control-button a" type="button" onClick={this.sendKey} name="a">A</button>
-            </div>
-          </div>
-        </div>
-      </main>
+        </main>
       </div>
     )
   }

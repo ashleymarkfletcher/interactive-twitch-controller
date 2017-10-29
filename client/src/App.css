@@ -59,7 +59,6 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: 'Press Start 2P', cursive;
-
 }
 
 h1 {
@@ -91,7 +90,6 @@ main {
   /*display: inline;*/
   float: left;
   text-align: center;
-
 }
 
 .control-right {
@@ -99,16 +97,14 @@ main {
   height: 100%;
   float: right;
   text-align: center;
-  /*display: inline;*/
-
 }
 
 .direction-button  {
   font-family: 'Press Start 2P', cursive;
   background: #3D4C53;
-  margin : 20px auto;
-  width : 200px;
-  height : 50px;
+  margin : 20px 20px;
+  width : 100px;
+  height : 80px;
   text-align : center;
   border: none;
   border-radius: 5px;
@@ -116,11 +112,13 @@ main {
   color: white;
 }
 
-.direction-button:focus { outline: none; }
+.direction-button:focus {
+	outline: none;
+}
 
 .control-button  {
   font-family: 'Press Start 2P', cursive;
-  margin : 20px auto;
+  margin : 20px 20px;
   width : 80px;
   height : 80px;
   text-align : center;
@@ -130,7 +128,9 @@ main {
   color: white;
 }
 
-.control-button:focus { outline: none; }
+.control-button:focus {
+	outline: none;
+}
 
 .control-button.a {
   background: #ED1B24;
@@ -151,4 +151,5 @@ main {
 .online-status {
 	width: 100%;
 	height: 10%;
+	text-align: center;
 }
